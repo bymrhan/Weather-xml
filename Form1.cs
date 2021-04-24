@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace Weather_xml
 {
@@ -153,6 +155,36 @@ namespace Weather_xml
                 iller.Items.Add("Tunceli ");
                 iller.Items.Add("Van");
             }
+        }
+
+        private void iller_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtbaşlık.Text = iller.Text;
+            havadurumu();
+        }
+
+        public void havadurumu()
+        {
+            string api = "http://api.openweathermap.org/data/2.5/weather?q=" + iller.Text + "&mode=xml&units=metric&lang=tr&appid=57551962a5d04e41c9cf727bf37bb0a8";
+            XDocument hava_durumu = XDocument.Load(api);
+
+            var sicaklik = hava_durumu.Descendants("temperature").ElementAt(0).Attribute("value").Value;
+            txtsıcaklık.Text = sicaklik + "°";
+
+            var his_sicaklik = hava_durumu.Descendants("feels_like").ElementAt(0).Attribute("value").Value;
+            txtfeeltemp.Text = "Hissedilen Sıcaklık " + his_sicaklik + "°";
+
+            var nem = hava_durumu.Descendants("humidity").ElementAt(0).Attribute("value").Value;
+            txtnem.Text = "Nem %" + nem;
+
+            var basınç = hava_durumu.Descendants("pressure").ElementAt(0).Attribute("value").Value;
+            txtbasınç.Text = "Basınç " + basınç + "hPa";
+
+            var rüzgar = hava_durumu.Descendants("speed").ElementAt(0).Attribute("value").Value;
+            txtrüzgar.Text = "Rüzgar " + rüzgar + " m/s";
+
+            var bulut = hava_durumu.Descendants("clouds").ElementAt(0).Attribute("value").Value;
+            txtcloud.Text = "Bulut Oranı % " + bulut;
         }
     }
 }

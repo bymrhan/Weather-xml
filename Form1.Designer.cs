@@ -84,6 +84,7 @@ namespace Weather_xml
             this.iller.Name = "iller";
             this.iller.Size = new System.Drawing.Size(121, 21);
             this.iller.TabIndex = 0;
+            this.iller.SelectedIndexChanged += new System.EventHandler(this.iller_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -184,7 +185,7 @@ namespace Weather_xml
             this.txtrüzgar.BackColor = System.Drawing.Color.Transparent;
             this.txtrüzgar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtrüzgar.ForeColor = System.Drawing.Color.White;
-            this.txtrüzgar.Location = new System.Drawing.Point(927, 122);
+            this.txtrüzgar.Location = new System.Drawing.Point(893, 122);
             this.txtrüzgar.Name = "txtrüzgar";
             this.txtrüzgar.Size = new System.Drawing.Size(61, 16);
             this.txtrüzgar.TabIndex = 0;
@@ -196,7 +197,7 @@ namespace Weather_xml
             this.txtbasınç.BackColor = System.Drawing.Color.Transparent;
             this.txtbasınç.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtbasınç.ForeColor = System.Drawing.Color.White;
-            this.txtbasınç.Location = new System.Drawing.Point(691, 122);
+            this.txtbasınç.Location = new System.Drawing.Point(663, 122);
             this.txtbasınç.Name = "txtbasınç";
             this.txtbasınç.Size = new System.Drawing.Size(83, 16);
             this.txtbasınç.TabIndex = 0;
