@@ -31,8 +31,8 @@ namespace Weather_xml
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.bölge = new System.Windows.Forms.ComboBox();
+            this.iller = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -68,21 +68,22 @@ namespace Weather_xml
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // bölge
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.bölge.FormattingEnabled = true;
+            this.bölge.Location = new System.Drawing.Point(13, 13);
+            this.bölge.Name = "bölge";
+            this.bölge.Size = new System.Drawing.Size(121, 21);
+            this.bölge.TabIndex = 0;
+            this.bölge.SelectedIndexChanged += new System.EventHandler(this.bölge_SelectedIndexChanged);
             // 
-            // comboBox2
+            // iller
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(169, 13);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 0;
+            this.iller.FormattingEnabled = true;
+            this.iller.Location = new System.Drawing.Point(169, 13);
+            this.iller.Name = "iller";
+            this.iller.Size = new System.Drawing.Size(121, 21);
+            this.iller.TabIndex = 0;
             // 
             // panel1
             // 
@@ -168,6 +169,7 @@ namespace Weather_xml
             // txtaçıklama
             // 
             this.txtaçıklama.AutoSize = true;
+            this.txtaçıklama.BackColor = System.Drawing.Color.Transparent;
             this.txtaçıklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtaçıklama.ForeColor = System.Drawing.Color.White;
             this.txtaçıklama.Location = new System.Drawing.Point(1141, 124);
@@ -179,6 +181,7 @@ namespace Weather_xml
             // txtrüzgar
             // 
             this.txtrüzgar.AutoSize = true;
+            this.txtrüzgar.BackColor = System.Drawing.Color.Transparent;
             this.txtrüzgar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtrüzgar.ForeColor = System.Drawing.Color.White;
             this.txtrüzgar.Location = new System.Drawing.Point(927, 122);
@@ -190,6 +193,7 @@ namespace Weather_xml
             // txtbasınç
             // 
             this.txtbasınç.AutoSize = true;
+            this.txtbasınç.BackColor = System.Drawing.Color.Transparent;
             this.txtbasınç.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtbasınç.ForeColor = System.Drawing.Color.White;
             this.txtbasınç.Location = new System.Drawing.Point(691, 122);
@@ -201,6 +205,7 @@ namespace Weather_xml
             // txtnem
             // 
             this.txtnem.AutoSize = true;
+            this.txtnem.BackColor = System.Drawing.Color.Transparent;
             this.txtnem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtnem.ForeColor = System.Drawing.Color.White;
             this.txtnem.Location = new System.Drawing.Point(465, 122);
@@ -212,6 +217,7 @@ namespace Weather_xml
             // txtgbatış
             // 
             this.txtgbatış.AutoSize = true;
+            this.txtgbatış.BackColor = System.Drawing.Color.Transparent;
             this.txtgbatış.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtgbatış.ForeColor = System.Drawing.Color.White;
             this.txtgbatış.Location = new System.Drawing.Point(249, 99);
@@ -223,6 +229,7 @@ namespace Weather_xml
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(254, 122);
@@ -234,6 +241,7 @@ namespace Weather_xml
             // txtgdoğuş
             // 
             this.txtgdoğuş.AutoSize = true;
+            this.txtgdoğuş.BackColor = System.Drawing.Color.Transparent;
             this.txtgdoğuş.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtgdoğuş.ForeColor = System.Drawing.Color.White;
             this.txtgdoğuş.Location = new System.Drawing.Point(33, 99);
@@ -245,6 +253,7 @@ namespace Weather_xml
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(33, 122);
@@ -373,8 +382,8 @@ namespace Weather_xml
             this.ClientSize = new System.Drawing.Size(1246, 622);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.iller);
+            this.Controls.Add(this.bölge);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -394,8 +403,8 @@ namespace Weather_xml
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox bölge;
+        private System.Windows.Forms.ComboBox iller;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;

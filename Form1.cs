@@ -15,6 +15,144 @@ namespace Weather_xml
         public Form1()
         {
             InitializeComponent();
+            panel1.BackColor = Color.FromArgb(150, Color.Black);
+            panel2.BackColor = Color.FromArgb(100, Color.Gray);
+            bölge.Items.Add("Marmara");
+            bölge.Items.Add("İç Anadolu");
+            bölge.Items.Add("Ege");
+            bölge.Items.Add("Akdeniz");
+            bölge.Items.Add("Güneydoğu Anadolu");
+            bölge.Items.Add("Karadeniz");
+            bölge.Items.Add("Doğu Anadolu");
+            bölge.SelectedIndex = 0;
+        }
+
+        private void bölge_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bölge.Text == "Marmara")
+            {
+                iller.Items.Clear();
+                iller.Items.Add("İstanbul");
+                iller.Items.Add("Edirne");
+                iller.Items.Add("Kırklareli");
+                iller.Items.Add("Tekirdağ");
+                iller.Items.Add("Çanakkale");
+                iller.Items.Add("Kocaeli");
+                iller.Items.Add("Yalova");
+                iller.Items.Add("Sakarya");
+                iller.Items.Add("Bilecik");
+                iller.Items.Add("Bursa");
+                iller.Items.Add("Balıkesir");
+                iller.SelectedIndex = 0;
+            }
+
+            if (bölge.Text == "İç Anadolu")
+            {
+                iller.Items.Clear();
+
+                iller.Text = "Lütfen İl Seçin";
+                iller.Items.Add("Ankara");
+                iller.Items.Add("Konya");
+                iller.Items.Add("Kayseri");
+                iller.Items.Add("Eskişehir");
+                iller.Items.Add("Sivas");
+                iller.Items.Add("Kırıkkale");
+                iller.Items.Add("Aksaray");
+                iller.Items.Add("Karaman");
+                iller.Items.Add("Kırşehir");
+                iller.Items.Add("Niğde");
+                iller.Items.Add("Nevşehir");
+                iller.Items.Add("Yozgat");
+                iller.Items.Add("Çankırı");
+            }
+            if (bölge.Text == "Ege")
+            {
+                iller.Items.Clear();
+
+                iller.Text = "Lütfen İl Seçin";
+                iller.Items.Add("İzmir");
+                iller.Items.Add("Manisa");
+                iller.Items.Add("Aydın");
+                iller.Items.Add("Denizli");
+                iller.Items.Add("Muğla");
+                iller.Items.Add("Afyonkarahisar");
+                iller.Items.Add("Kütahya");
+                iller.Items.Add("Uşak");
+            }
+            if (bölge.Text == "Akdeniz")
+            {
+                iller.Items.Clear();
+                iller.ResetText();
+                iller.Text = "Lütfen İl Seçin";
+                iller.Items.Add("Adana");
+                iller.Items.Add("Antalya");
+                iller.Items.Add("Burdur");
+                iller.Items.Add("Hatay");
+                iller.Items.Add("Isparta");
+                iller.Items.Add("Mersin");
+                iller.Items.Add("Osmaniye");
+                iller.Items.Add("Kahramanmaraş");
+
+            }
+            if (bölge.Text == "Güneydoğu Anadolu")
+            {
+                iller.Items.Clear();
+                iller.ResetText();
+                iller.Text = "Lütfen İl Seçin";
+                iller.Items.Add("Adıyaman");
+                iller.Items.Add("Batman");
+                iller.Items.Add("Diyarbakır");
+                iller.Items.Add("Gaziantep");
+                iller.Items.Add("Kilis");
+                iller.Items.Add("Mardin");
+                iller.Items.Add("Şanlıurfa");
+                iller.Items.Add("Siirt");
+                iller.Items.Add("Şırnak");
+            }
+            if (bölge.Text == "Karadeniz")
+            {
+                iller.Items.Clear();
+                iller.ResetText();
+                iller.Text = "Lütfen İl Seçin";
+                iller.Items.Add("Artvin");
+                iller.Items.Add("Rize");
+                iller.Items.Add("Bayburt");
+                iller.Items.Add("Trabzon");
+                iller.Items.Add("Gümüşhane");
+                iller.Items.Add("Giresun");
+                iller.Items.Add("Ordu");
+                iller.Items.Add("Tokat");
+                iller.Items.Add("Amasya");
+                iller.Items.Add("Samsun");
+                iller.Items.Add("Sinop");
+                iller.Items.Add("Çorum");
+                iller.Items.Add("Kastamonu");
+                iller.Items.Add("Bartın");
+                iller.Items.Add("Karabük");
+                iller.Items.Add("Zonguldak");
+                iller.Items.Add("Düzce");
+                iller.Items.Add("Bolu");
+            }
+            if (bölge.Text == "Doğu Anadolu")
+            {
+                iller.Items.Clear();
+                iller.ResetText();
+                iller.Text = "Lütfen İl Seçin";
+                iller.Items.Add("Ağrı");
+                iller.Items.Add("Ardahan");
+                iller.Items.Add("Bingöl");
+                iller.Items.Add("Bitlis");
+                iller.Items.Add("Elazığ");
+                iller.Items.Add("Erzincan");
+                iller.Items.Add("Erzurum");
+                iller.Items.Add("Hakkari");
+                iller.Items.Add("Iğdır");
+                iller.Items.Add("Kars");
+                iller.Items.Add("Malatya");
+                iller.Items.Add("Muş");
+                iller.Items.Add("Tunceli ");
+                iller.Items.Add("Van");
+            }
         }
     }
 }
