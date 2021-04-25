@@ -255,19 +255,17 @@ namespace Weather_xml
         }
 
         string yedek = "0";
-         void kayıt()
+         public void kayıt()
         {
             //xml verisindeki update verisi kontrollerim sonucu doğru olmadığı için kontrol yapımı lastupdate göre değil sıcaklık verime göre yapacağım
-            
-            
-
+                    
             while (txtsıcaklık.Text != yedek)
             {
                 yedek = txtsıcaklık.Text;
-                FileStream fs = new FileStream(@"C:\Users\emreh\Desktop\Derslerim\2.sınıf 2.dönem\Projeler\eczanedneme\havadurumu.txt", FileMode.Append, FileAccess.Write, FileShare.Write);
+                FileStream fs = new FileStream(@"C:\Users\emreh\Desktop\Derslerim\2.sınıf 2.dönem\Projeler\Weather_xml\havadurumu.txt", FileMode.Append, FileAccess.Write, FileShare.Write);
                 StreamWriter sw = new StreamWriter(fs);
 
-                sw.WriteLine("*****" + txttarih.Text + "*****" + txtsystemsaat.Text + "*****");
+                sw.WriteLine("*****" + txttarih.Text + "*****" + DateTime.Now.ToLongTimeString() + "*****");
                 sw.WriteLine("Bölge :"+ bölge.Text);
                 sw.WriteLine(txtbaşlık.Text + " Sıcaklık " + txtsıcaklık.Text);
                 sw.WriteLine(txtaçıklama.Text);
@@ -282,15 +280,8 @@ namespace Weather_xml
 
                 // notify ile kullanıcıya bildirim sağlandı
                 notifyIcon1.ShowBalloonTip(5000, "WeatherMap", "Yeni veriler geldi :)", ToolTipIcon.Warning);
-               
-
             }
-
-
-
-
-        
-            
+         
         }
    
         private void timer1_Tick(object sender, EventArgs e)
