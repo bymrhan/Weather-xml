@@ -54,12 +54,14 @@ namespace Weather_xml
             this.label1 = new System.Windows.Forms.Label();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtsystemsaat = new System.Windows.Forms.Label();
+            this.txttarih = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtbaşlık = new System.Windows.Forms.Label();
             this.txtsıcaklık = new System.Windows.Forms.Label();
-            this.txttarih = new System.Windows.Forms.Label();
             this.txtfeeltemp = new System.Windows.Forms.Label();
-            this.txtsystemsaat = new System.Windows.Forms.Label();
             this.txtcloud = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,6 +69,7 @@ namespace Weather_xml
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.az_bulut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -79,25 +82,30 @@ namespace Weather_xml
             ((System.ComponentModel.ISupportInitialize)(this.güneş)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // bölge
             // 
+            this.bölge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bölge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bölge.FormattingEnabled = true;
-            this.bölge.Location = new System.Drawing.Point(23, 43);
+            this.bölge.Location = new System.Drawing.Point(11, 40);
             this.bölge.Name = "bölge";
-            this.bölge.Size = new System.Drawing.Size(121, 21);
+            this.bölge.Size = new System.Drawing.Size(121, 24);
             this.bölge.TabIndex = 0;
             this.bölge.SelectedIndexChanged += new System.EventHandler(this.bölge_SelectedIndexChanged);
             // 
             // iller
             // 
+            this.iller.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.iller.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.iller.FormattingEnabled = true;
-            this.iller.Location = new System.Drawing.Point(182, 43);
+            this.iller.Location = new System.Drawing.Point(177, 40);
             this.iller.Name = "iller";
-            this.iller.Size = new System.Drawing.Size(121, 21);
+            this.iller.Size = new System.Drawing.Size(121, 24);
             this.iller.TabIndex = 0;
             this.iller.SelectedIndexChanged += new System.EventHandler(this.iller_SelectedIndexChanged);
             // 
@@ -346,14 +354,16 @@ namespace Weather_xml
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txttarih);
+            this.panel2.Controls.Add(this.txtsystemsaat);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.txtbaşlık);
             this.panel2.Controls.Add(this.bölge);
             this.panel2.Controls.Add(this.iller);
             this.panel2.Controls.Add(this.txtsıcaklık);
-            this.panel2.Controls.Add(this.txttarih);
             this.panel2.Controls.Add(this.txtfeeltemp);
-            this.panel2.Controls.Add(this.txtsystemsaat);
             this.panel2.Controls.Add(this.txtcloud);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -361,6 +371,51 @@ namespace Weather_xml
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 486);
             this.panel2.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DimGray;
+            this.panel3.Location = new System.Drawing.Point(0, 70);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(316, 5);
+            this.panel3.TabIndex = 14;
+            // 
+            // txtsystemsaat
+            // 
+            this.txtsystemsaat.AutoSize = true;
+            this.txtsystemsaat.BackColor = System.Drawing.Color.Transparent;
+            this.txtsystemsaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtsystemsaat.ForeColor = System.Drawing.Color.Gold;
+            this.txtsystemsaat.Location = new System.Drawing.Point(7, 124);
+            this.txtsystemsaat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtsystemsaat.Name = "txtsystemsaat";
+            this.txtsystemsaat.Size = new System.Drawing.Size(57, 20);
+            this.txtsystemsaat.TabIndex = 9;
+            this.txtsystemsaat.Text = "label6";
+            // 
+            // txttarih
+            // 
+            this.txttarih.AutoSize = true;
+            this.txttarih.BackColor = System.Drawing.Color.Transparent;
+            this.txttarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txttarih.ForeColor = System.Drawing.Color.Gold;
+            this.txttarih.Location = new System.Drawing.Point(126, 124);
+            this.txttarih.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txttarih.Name = "txttarih";
+            this.txttarih.Size = new System.Drawing.Size(79, 20);
+            this.txttarih.TabIndex = 8;
+            this.txttarih.Text = "20 Nisan";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = global::Weather_xml.Properties.Resources._044_temperature_2;
+            this.pictureBox8.Location = new System.Drawing.Point(247, 369);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(61, 57);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 1;
+            this.pictureBox8.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -402,19 +457,6 @@ namespace Weather_xml
             this.txtsıcaklık.Text = "19°C";
             this.txtsıcaklık.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txttarih
-            // 
-            this.txttarih.AutoSize = true;
-            this.txttarih.BackColor = System.Drawing.Color.Transparent;
-            this.txttarih.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttarih.ForeColor = System.Drawing.Color.Gold;
-            this.txttarih.Location = new System.Drawing.Point(122, 121);
-            this.txttarih.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txttarih.Name = "txttarih";
-            this.txttarih.Size = new System.Drawing.Size(95, 25);
-            this.txttarih.TabIndex = 8;
-            this.txttarih.Text = "20 Nisan";
-            // 
             // txtfeeltemp
             // 
             this.txtfeeltemp.AutoSize = true;
@@ -426,19 +468,6 @@ namespace Weather_xml
             this.txtfeeltemp.Size = new System.Drawing.Size(184, 24);
             this.txtfeeltemp.TabIndex = 1;
             this.txtfeeltemp.Text = "Hissedilen Sıcaklık";
-            // 
-            // txtsystemsaat
-            // 
-            this.txtsystemsaat.AutoSize = true;
-            this.txtsystemsaat.BackColor = System.Drawing.Color.Transparent;
-            this.txtsystemsaat.Font = new System.Drawing.Font("Poor Richard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsystemsaat.ForeColor = System.Drawing.Color.Gold;
-            this.txtsystemsaat.Location = new System.Drawing.Point(19, 121);
-            this.txtsystemsaat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtsystemsaat.Name = "txtsystemsaat";
-            this.txtsystemsaat.Size = new System.Drawing.Size(62, 24);
-            this.txtsystemsaat.TabIndex = 9;
-            this.txtsystemsaat.Text = "label6";
             // 
             // txtcloud
             // 
@@ -458,7 +487,7 @@ namespace Weather_xml
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(179, 13);
+            this.label4.Location = new System.Drawing.Point(174, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 16);
             this.label4.TabIndex = 0;
@@ -470,7 +499,7 @@ namespace Weather_xml
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(20, 13);
+            this.label3.Location = new System.Drawing.Point(8, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 0;
@@ -507,6 +536,12 @@ namespace Weather_xml
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,6 +553,7 @@ namespace Weather_xml
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -535,6 +571,7 @@ namespace Weather_xml
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
@@ -580,6 +617,9 @@ namespace Weather_xml
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
 
