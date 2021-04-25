@@ -13,12 +13,16 @@ kontrol ederek yeni değer varsa ekrana bildirim veren bir uygulama yaptım
 http://api.openweathermap.org/data/2.5/weather?q=istanbul&mode=xml&units=metric&lang=tr&appid=*****************
 ---
 api kimliği openweathermap'den almanız gerekiyor
-//q=istanbul kısmı hangi şehirden veri çekileceğini belirtir
-//mode kısmı verilerin json veya xml olarak çekilceğini belirtir
-//units kısmı emparial ve metric olarak oluşturulur emparial Fahrenayt (F) verisi kullanır metric ise santigrat (C)
-lang kısmında verilerin dilini seçiyoruz
 
-###Örnek api çağrısı 
+//q=istanbul kısmı hangi şehirden veri çekileceğini belirtir
+
+//mode kısmı verilerin json veya xml olarak çekilceğini belirtir
+
+//units kısmı emparial ve metric olarak oluşturulur emparial Fahrenayt (F) verisi kullanır metric ise santigrat (C)
+
+//lang kısmında verilerin dilini seçiyoruz
+
+### Örnek api çağrısı 
 
 ` current>
 <city id="745042" name="İstanbul">
