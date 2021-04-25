@@ -17,6 +17,11 @@ namespace Weather_xml
         public Form1()
         {
             InitializeComponent();
+           
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
             panel1.BackColor = Color.FromArgb(150, Color.Black);
             panel2.BackColor = Color.FromArgb(100, Color.White);
             bölge.Items.Add("Marmara");
@@ -28,7 +33,6 @@ namespace Weather_xml
             bölge.Items.Add("Doğu Anadolu");
             bölge.SelectedIndex = 0;
         }
-
         private void bölge_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (bölge.Text == "Marmara")
@@ -236,16 +240,20 @@ namespace Weather_xml
             {
                 bulutlu.Visible = true;
             }
-            else if (txtaçıklama.Text == "hafif yağmur" || txtaçıklama.Text == "orta şiddetli yağmur")
+            else if (txtaçıklama.Text == "hafif yağmur" || txtaçıklama.Text == "orta şiddetli yağmur" || txtaçıklama.Text == "yağmurlu")
             {
                 yağmur.Visible = true;
             }
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+       
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txttarih.Text = String.Format("{0:M}", DateTime.Now);
+
+            txtsystemsaat.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

@@ -113,6 +113,16 @@ namespace Weather_xml.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _031_weather_forecast {
+            get {
+                object obj = ResourceManager.GetObject("031-weather forecast", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap _049_clouds {
             get {
                 object obj = ResourceManager.GetObject("049-clouds", resourceCulture);
