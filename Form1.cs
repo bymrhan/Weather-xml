@@ -18,7 +18,7 @@ namespace Weather_xml
         {
             InitializeComponent();
             panel1.BackColor = Color.FromArgb(150, Color.Black);
-            panel2.BackColor = Color.FromArgb(100, Color.Gray);
+            panel2.BackColor = Color.FromArgb(100, Color.White);
             bölge.Items.Add("Marmara");
             bölge.Items.Add("İç Anadolu");
             bölge.Items.Add("Ege");
@@ -185,6 +185,67 @@ namespace Weather_xml
 
             var bulut = hava_durumu.Descendants("clouds").ElementAt(0).Attribute("value").Value;
             txtcloud.Text = "Bulut Oranı % " + bulut;
+
+            var hava_acıklama = hava_durumu.Descendants("weather").ElementAt(0).Attribute("value").Value;
+            txtaçıklama.Text = hava_acıklama;
+            hava_durumu_açıklama();
+            //sun rise formatı "2021-04-25T03:10:00" başındaki tarihe ihtiyacım olmadığı için removo ile string silme işlemi yaptım 
+            // api kaynağında saat utc global (0.00)
+            //Tr utc (+3.00) olduğu için saat verisi 3 saat geri 
+            //saat eklemesi yapabilmem için doğru şekilde stringi bölüm saat tarafına +3 saat eklemem gerekiyordu
+            //remove işlemi sonrasi gün_doğuş"03:10:00" ":" burlardan "boşluk" ile bölüp dizi içine atıyorum
+            //parcalar[0] dizisinin karşılığı "03" "+3" ekleyerek saat farkını kaldırıyorum
+            string gün_dogus = hava_durumu.Descendants("sun").ElementAt(0).Attribute("rise").Value.Remove(0, 11);
+            char[] ayrac = { ':', ' ', ' ' };
+            string[] parcalar = gün_dogus.Split(ayrac); 
+            int number = Convert.ToInt32(parcalar[0]) + 3;
+            txtgdoğuş.Text = ("0" + (number) + ":" + (parcalar[1]) + " :" + (parcalar[2]));
+
+
+            //aynı işlemleri güneş batış saati için yapıyorum
+            string gün_batış = hava_durumu.Descendants("sun").ElementAt(0).Attribute("set").Value.Remove(0, 11);          
+            string[] parcalar2 = gün_batış.Split(ayrac);
+            int number2 = Convert.ToInt32(parcalar2[0]) + 3;
+            txtgbatış.Text = (number2 + ":" + (parcalar2[1]) + " :" + (parcalar2[2]));
+
+           
+        }
+
+        public void hava_durumu_açıklama()
+        {
+            az_bulut.Visible = false;
+            yağmur.Visible = false;
+            bulutlu.Visible = false;
+            güneş.Visible = false;
+            kar.Visible = false;
+
+            if (txtaçıklama.Text == "az bulutlu" || txtaçıklama.Text == "parçalı bulutlu" ||txtaçıklama.Text == "parçalı az bulutlu")
+            {
+                az_bulut.Visible = true;
+               
+            }        
+            else if (txtaçıklama.Text == "kar yağışlı")
+            {
+                kar.Visible = true;
+            }
+            else if (txtaçıklama.Text == "açık")
+            {
+                güneş.Visible = true;
+            }
+            else if (txtaçıklama.Text == "kapalı")
+            {
+                bulutlu.Visible = true;
+            }
+            else if (txtaçıklama.Text == "hafif yağmur" || txtaçıklama.Text == "orta şiddetli yağmur")
+            {
+                yağmur.Visible = true;
+            }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

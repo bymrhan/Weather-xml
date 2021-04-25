@@ -63,6 +63,26 @@ namespace Weather_xml.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _008_snow_1 {
+            get {
+                object obj = ResourceManager.GetObject("008-snow-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _012_rain_2 {
+            get {
+                object obj = ResourceManager.GetObject("012-rain-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap _016_sunrise {
             get {
                 object obj = ResourceManager.GetObject("016-sunrise", resourceCulture);
@@ -86,6 +106,26 @@ namespace Weather_xml.Properties {
         internal static System.Drawing.Bitmap _022_humidity {
             get {
                 object obj = ResourceManager.GetObject("022-humidity", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _049_clouds {
+            get {
+                object obj = ResourceManager.GetObject("049-clouds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _050_sun {
+            get {
+                object obj = ResourceManager.GetObject("050-sun", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

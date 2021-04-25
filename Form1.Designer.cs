@@ -34,7 +34,6 @@ namespace Weather_xml
             this.bölge = new System.Windows.Forms.ComboBox();
             this.iller = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,6 +47,9 @@ namespace Weather_xml
             this.label2 = new System.Windows.Forms.Label();
             this.txtgdoğuş = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.yağmur = new System.Windows.Forms.PictureBox();
+            this.kar = new System.Windows.Forms.PictureBox();
+            this.az_bulut = new System.Windows.Forms.PictureBox();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -57,15 +59,21 @@ namespace Weather_xml
             this.txtfeeltemp = new System.Windows.Forms.Label();
             this.txtsystemsaat = new System.Windows.Forms.Label();
             this.txtcloud = new System.Windows.Forms.Label();
+            this.güneş = new System.Windows.Forms.PictureBox();
+            this.bulutlu = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yağmur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.az_bulut)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.güneş)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bulutlu)).BeginInit();
             this.SuspendLayout();
             // 
             // bölge
@@ -89,11 +97,15 @@ namespace Weather_xml
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.az_bulut);
             this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.kar);
             this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.yağmur);
             this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.bulutlu);
             this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.güneş);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtaçıklama);
             this.panel1.Controls.Add(this.txtrüzgar);
@@ -106,29 +118,23 @@ namespace Weather_xml
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 473);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1246, 149);
+            this.panel1.Size = new System.Drawing.Size(1254, 149);
             this.panel1.TabIndex = 1;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(1129, 15);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(77, 77);
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Weather_xml.Properties.Resources.anemometer;
             this.pictureBox5.Location = new System.Drawing.Point(908, 15);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(77, 77);
+            this.pictureBox5.Size = new System.Drawing.Size(95, 75);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::Weather_xml.Properties.Resources.barometer;
             this.pictureBox4.Location = new System.Drawing.Point(687, 15);
             this.pictureBox4.Name = "pictureBox4";
@@ -139,6 +145,7 @@ namespace Weather_xml
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Weather_xml.Properties.Resources._022_humidity;
             this.pictureBox3.Location = new System.Drawing.Point(466, 15);
             this.pictureBox3.Name = "pictureBox3";
@@ -149,6 +156,7 @@ namespace Weather_xml
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Weather_xml.Properties.Resources._017_sunset;
             this.pictureBox2.Location = new System.Drawing.Point(245, 15);
             this.pictureBox2.Name = "pictureBox2";
@@ -159,6 +167,7 @@ namespace Weather_xml
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Weather_xml.Properties.Resources._016_sunrise;
             this.pictureBox1.Location = new System.Drawing.Point(24, 15);
             this.pictureBox1.Name = "pictureBox1";
@@ -173,7 +182,7 @@ namespace Weather_xml
             this.txtaçıklama.BackColor = System.Drawing.Color.Transparent;
             this.txtaçıklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtaçıklama.ForeColor = System.Drawing.Color.White;
-            this.txtaçıklama.Location = new System.Drawing.Point(1141, 124);
+            this.txtaçıklama.Location = new System.Drawing.Point(1102, 122);
             this.txtaçıklama.Name = "txtaçıklama";
             this.txtaçıklama.Size = new System.Drawing.Size(54, 16);
             this.txtaçıklama.TabIndex = 0;
@@ -263,6 +272,39 @@ namespace Weather_xml
             this.label1.TabIndex = 0;
             this.label1.Text = "G.Doğus";
             // 
+            // yağmur
+            // 
+            this.yağmur.BackColor = System.Drawing.Color.Transparent;
+            this.yağmur.Image = global::Weather_xml.Properties.Resources._012_rain_2;
+            this.yağmur.Location = new System.Drawing.Point(1097, 15);
+            this.yağmur.Name = "yağmur";
+            this.yağmur.Size = new System.Drawing.Size(95, 75);
+            this.yağmur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.yağmur.TabIndex = 8;
+            this.yağmur.TabStop = false;
+            // 
+            // kar
+            // 
+            this.kar.BackColor = System.Drawing.Color.Transparent;
+            this.kar.Image = global::Weather_xml.Properties.Resources._008_snow_1;
+            this.kar.Location = new System.Drawing.Point(1097, 13);
+            this.kar.Name = "kar";
+            this.kar.Size = new System.Drawing.Size(95, 75);
+            this.kar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.kar.TabIndex = 9;
+            this.kar.TabStop = false;
+            // 
+            // az_bulut
+            // 
+            this.az_bulut.BackColor = System.Drawing.Color.Transparent;
+            this.az_bulut.Image = ((System.Drawing.Image)(resources.GetObject("az_bulut.Image")));
+            this.az_bulut.Location = new System.Drawing.Point(1097, 15);
+            this.az_bulut.Name = "az_bulut";
+            this.az_bulut.Size = new System.Drawing.Size(95, 75);
+            this.az_bulut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.az_bulut.TabIndex = 10;
+            this.az_bulut.TabStop = false;
+            // 
             // ımageList1
             // 
             this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
@@ -271,6 +313,7 @@ namespace Weather_xml
             this.ımageList1.Images.SetKeyName(1, "008-snow-1.png");
             this.ımageList1.Images.SetKeyName(2, "010-rain-3.png");
             this.ımageList1.Images.SetKeyName(3, "049-clouds.png");
+            this.ımageList1.Images.SetKeyName(4, "050-sun.png");
             // 
             // panel2
             // 
@@ -283,11 +326,12 @@ namespace Weather_xml
             this.panel2.Controls.Add(this.txtcloud);
             this.panel2.Location = new System.Drawing.Point(939, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(307, 422);
+            this.panel2.Size = new System.Drawing.Size(315, 422);
             this.panel2.TabIndex = 13;
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::Weather_xml.Properties.Resources.google_maps;
             this.pictureBox7.Location = new System.Drawing.Point(221, 0);
             this.pictureBox7.Name = "pictureBox7";
@@ -304,7 +348,8 @@ namespace Weather_xml
             this.txtbaşlık.AutoSize = true;
             this.txtbaşlık.BackColor = System.Drawing.Color.Transparent;
             this.txtbaşlık.Font = new System.Drawing.Font("Painter PERSONAL USE ONLY", 50.25F);
-            this.txtbaşlık.Location = new System.Drawing.Point(7, 61);
+            this.txtbaşlık.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtbaşlık.Location = new System.Drawing.Point(3, 65);
             this.txtbaşlık.Name = "txtbaşlık";
             this.txtbaşlık.Size = new System.Drawing.Size(291, 95);
             this.txtbaşlık.TabIndex = 11;
@@ -374,30 +419,57 @@ namespace Weather_xml
             this.txtcloud.TabIndex = 3;
             this.txtcloud.Text = "Bulut Oranı";
             // 
+            // güneş
+            // 
+            this.güneş.BackColor = System.Drawing.Color.Transparent;
+            this.güneş.Image = global::Weather_xml.Properties.Resources._050_sun;
+            this.güneş.Location = new System.Drawing.Point(1097, 13);
+            this.güneş.Name = "güneş";
+            this.güneş.Size = new System.Drawing.Size(95, 75);
+            this.güneş.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.güneş.TabIndex = 6;
+            this.güneş.TabStop = false;
+            // 
+            // bulutlu
+            // 
+            this.bulutlu.BackColor = System.Drawing.Color.Transparent;
+            this.bulutlu.Image = global::Weather_xml.Properties.Resources._049_clouds;
+            this.bulutlu.Location = new System.Drawing.Point(1097, 15);
+            this.bulutlu.Name = "bulutlu";
+            this.bulutlu.Size = new System.Drawing.Size(95, 75);
+            this.bulutlu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bulutlu.TabIndex = 7;
+            this.bulutlu.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Weather_xml.Properties.Resources.İstanbul;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1246, 622);
+            this.ClientSize = new System.Drawing.Size(1254, 622);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.iller);
             this.Controls.Add(this.bölge);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yağmur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.az_bulut)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.güneş)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bulutlu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,7 +491,6 @@ namespace Weather_xml
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txtgdoğuş;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label txtaçıklama;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Panel panel2;
@@ -430,6 +501,11 @@ namespace Weather_xml
         private System.Windows.Forms.Label txtsystemsaat;
         private System.Windows.Forms.Label txtcloud;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox yağmur;
+        private System.Windows.Forms.PictureBox kar;
+        private System.Windows.Forms.PictureBox az_bulut;
+        private System.Windows.Forms.PictureBox güneş;
+        private System.Windows.Forms.PictureBox bulutlu;
     }
 }
 

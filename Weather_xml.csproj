@@ -101,5 +101,17 @@
   <ItemGroup>
     <None Include="Resources\google-maps.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\050-sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\049-clouds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012-rain-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008-snow-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
