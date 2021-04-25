@@ -22,8 +22,12 @@ namespace Weather_xml
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            timer2.Interval = 60000; //1 dakika
+            timer2.Enabled = true;
+            
             panel1.BackColor = Color.FromArgb(150, Color.Black);
             panel2.BackColor = Color.FromArgb(100, Color.White);
+            
             bölge.Items.Add("Marmara");
             bölge.Items.Add("İç Anadolu");
             bölge.Items.Add("Ege");
@@ -246,14 +250,17 @@ namespace Weather_xml
             }
 
         }
-
-       
-
+   
         private void timer1_Tick(object sender, EventArgs e)
         {
             txttarih.Text = String.Format("{0:M}", DateTime.Now);
 
             txtsystemsaat.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            havadurumu();
         }
     }
 }

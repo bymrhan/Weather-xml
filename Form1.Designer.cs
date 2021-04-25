@@ -66,6 +66,7 @@ namespace Weather_xml
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.az_bulut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -485,7 +486,7 @@ namespace Weather_xml
             this.pictureBox6.Image = global::Weather_xml.Properties.Resources._031_weather_forecast;
             this.pictureBox6.Location = new System.Drawing.Point(6, 9);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(52, 51);
+            this.pictureBox6.Size = new System.Drawing.Size(41, 41);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
@@ -494,13 +495,17 @@ namespace Weather_xml
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Painter PERSONAL USE ONLY", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Font = new System.Drawing.Font("Painter PERSONAL USE ONLY", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(64, 14);
+            this.label5.Location = new System.Drawing.Point(53, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 46);
+            this.label5.Size = new System.Drawing.Size(150, 35);
             this.label5.TabIndex = 0;
             this.label5.Text = "WeatherMap";
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -574,6 +579,7 @@ namespace Weather_xml
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
