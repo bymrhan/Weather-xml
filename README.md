@@ -1,5 +1,6 @@
 # Xml ile hava durumu verisi çekme
 Emrehan Baysal 1912901043
+![uygulama](https://user-images.githubusercontent.com/81330668/115980793-1cb26f00-a598-11eb-9808-c6c9ab458a57.JPG)
 
 
 https://openweathermap.org'nın XML dosyasından çekmiş olduğum verileri 60 sn'yede verileri 
