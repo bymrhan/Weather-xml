@@ -1,5 +1,5 @@
 # Xml ile hava durumu verisi çekme
-## Emrehan Baysal 1912901043
+
 ![uygulama](https://user-images.githubusercontent.com/81330668/115980793-1cb26f00-a598-11eb-9808-c6c9ab458a57.JPG)
 ![UYARI](https://user-images.githubusercontent.com/81330668/115981596-939e3680-a59d-11eb-9e7d-9000a331d5de.png)
 ![UYARI2](https://user-images.githubusercontent.com/81330668/115981613-a7e23380-a59d-11eb-9e53-ea5f0a31c940.png)
